@@ -1,0 +1,86 @@
+/* Breakpoints: 480px, 768px, 1000px */
+
+@media screen and (min-width: 768px) {
+  #header nav {
+    float: right;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #about .polaroid {
+    margin: -3% 10% 8% 10%;
+  }
+  #projects .grid:nth-child(2) {
+    padding-bottom: 0;
+  }
+  #projects .grid:nth-child(2) [class*='col-']:last-child {
+    margin-bottom: 0;
+  }
+  #projects [class*='col-'] + [class*='col-'] {
+    padding-top: 15px;
+  }
+  #projects .grid:last-child {
+    padding-top: 15px;
+  }
+  #work .resume:before,
+  #work .resume li:before {
+    left: inherit;
+    right: inherit !important;
+  }
+  #work .resume li {
+    width: 100%;
+  }
+  #work .resume .work-item {
+    text-align: left;
+  }
+  #work .resume .work-item:before {
+    transform: translate(-40px,6px);
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #header {
+    position: absolute;
+  }
+  #header.opaque-header {
+    box-shadow: none;
+    background: transparent;
+  }
+  #header nav {
+    margin: 10px 0;
+  }
+  #header nav ul li {
+    width: 100%;
+    margin: 10px 0;
+  }
+  #headline {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 768px){
+  #projects .project-content {
+    font-size: 0.80em;
+  }
+  #about .polaroid div {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px){
+  #about .polaroid div {
+    font-size: 3.4em;
+  }
+  #projects .project-content {
+    font-size: 1.3em;
+  }
+}
+
+@media (hover: none) {
+  #projects .project-container .overlay {
+    opacity: 0.6;
+  }
+  #projects .project-container .project-content {
+    opacity: 1;
+  }
+}
