@@ -85,7 +85,18 @@ nav ul li a {
 }
 
 #home {
+  position: relative;
   height: 100vh;
+}
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #445e75;
+  z-index: -120;
 }
 
 #headline {
@@ -210,8 +221,8 @@ nav ul li a {
 }
 #projects .overlay {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  bottom: 0;
+  right: 0;
   top: 0;
   left: 0;
   background: #000;
@@ -370,6 +381,11 @@ nav ul li a {
 #contact .fa {
   color: #525252;
 }
+#contact a, #contact a:visited,
+#contact a:active, #contact a:hover {
+  color: inherit;
+}
+
 .fa-phone {
   -webkit-animation: ring 4s infinite linear;
   animation: ring 4s infinite linear;

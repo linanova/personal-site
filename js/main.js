@@ -49,8 +49,11 @@ $(document).ready(function(){
     $('#header nav li').removeClass();
     $(this).parent().addClass("theme-color-bg");
 
-    let scrollTo = $(this.hash).offset().top - $('#header').height();
-    $('html,body').scrollTo(scrollTo, this.hash);
+    let scrollTo = $(this.hash).offset().top;
+    if ($('#header').css('position') == 'fixed') {
+      scrollTo -= $('#header').height();
+    }
+    $('html,body').scrollTo(Math.ceil(scrollTo), this.hash);
   });
 
 });

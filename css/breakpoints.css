@@ -32,6 +32,7 @@
   }
   #work .resume .work-item {
     text-align: left;
+    padding-right: 0;
   }
   #work .resume .work-item:before {
     transform: translate(-40px,6px);
@@ -51,7 +52,7 @@
   }
   #header nav ul li {
     width: 100%;
-    margin: 10px 0;
+    margin: 5px 0;
   }
   #headline {
     font-size: 40px;
