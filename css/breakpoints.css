@@ -8,7 +8,7 @@
 
 @media screen and (max-width: 767px) {
   #about .polaroid {
-    margin: -3% 10% 8% 10%;
+    margin: -5% 10% 13% 10%;
   }
   #projects .grid:nth-child(2) {
     padding-bottom: 0;
@@ -21,21 +21,6 @@
   }
   #projects .grid:last-child {
     padding-top: 15px;
-  }
-  #work .resume:before,
-  #work .resume li:before {
-    left: inherit;
-    right: inherit !important;
-  }
-  #work .resume li {
-    width: 100%;
-  }
-  #work .resume .work-item {
-    text-align: left;
-    padding-right: 0;
-  }
-  #work .resume .work-item:before {
-    transform: translate(-40px,6px);
   }
 }
 
@@ -66,9 +51,39 @@
   #about .polaroid div {
     font-size: 2em;
   }
+  #about .about-text {
+    margin-left: 0;
+    width: 41.66%;
+  }
+  #about .polaroid-container {
+    width: 41.66%;
+    margin-left: 8.33%
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #work .resume:before,
+  #work .resume li:not(:first-child):before {
+    left: inherit;
+    right: inherit !important;
+  }
+  #work .resume li {
+    width: 100%;
+  }
+  #work .resume .work-item {
+    text-align: left;
+    padding-right: 0;
+  }
+  #work .resume .work-item:before {
+    transform: translate(-40px,6px);
+  }
 }
 
 @media screen and (max-width: 767px) and (min-width: 480px){
+  #about .polaroid-container {
+    margin-left: 16.667%;
+    margin-right: 16.667%;
+  }
   #about .polaroid div {
     font-size: 3.4em;
   }
